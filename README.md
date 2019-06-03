@@ -9,11 +9,18 @@ $Text = "Logon: " + $UserName + " " + $CompName + " " + $Date + " " + $IPAddress
 $Text|Out-File -Append -FilePath C:\USERS\ll-72960\Documents\$Filename.txt
 
 4.1
-New-ADGroup -GroupScope Global -Name Sales -Path "ou=Sint-Niklaas, dc=MediaTech, dc=lan"
-Move-ADObject -TargetPath "Group=Sales, ou=Sint-Niklaas, dc=MediaTech, dc=lan"
-Set-ADUser -Identity BEP -Department Sales
-Add-ADGroupMember -Identity IT -Members BEP
+Clear-Host
+[int]$number1 = Read-Host "geef het eerste getal in"
+[int] $number2= Read-Host "geef het tweede getal in"
+[int] $verschil= $number1 - $number2
+[int] $som = $number1 + $number2
+[int] $product = $number1 * $number2
+[double] $quotient = $number1 / $number2
 
+ " het verschil tussen $number1 en $number2 is $verschil"
+ " de som tussen $number1 en $number2 is $som"
+ " het product tussen $number1 en $number2 is $product"
+ " het quotient tussen $number1 en $number2 is $quotient"
 4.3
 $set1 = (Get-Date).AddDays(-10)
 $set2 = (Get-Date).AddDays(-20)
