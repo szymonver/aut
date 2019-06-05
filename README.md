@@ -75,6 +75,15 @@ $setpassword = ConvertTo-SecureString $password -AsPlainText -Force
 }
 
 
+Clear-Host
+[int]$getal = Read-Host "kies een getal tussen 1 en 5"
+Switch ($getal)
+{
+2 {Write-Host "u heeft het nummer 2 gekozen"}
+3 {Write-Host "u heeft het nummer 3 gekozen"}
+4 {Write-Host "u heeft het nummer 4 gekozen"}
+5 {Write-Host "u heeft het nummer 5 gekozen"}
+}
 
 
 
