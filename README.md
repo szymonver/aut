@@ -56,6 +56,9 @@ Add-ADGroupMember -Identity IT-Members bep
 Set-ADUser -Identity ll-72960 -Company Mediatech -Department IT -EmailAddress ll-72960@broeders.be
 Get-ADuser -Identity ll-72960 -Properties *|format-table emailaddress,company,department
 
+
+
+
 $users = Import-Csv -Delimiter ";" -path c:\Import_ADUsers.csv
 ForEach($user in $users)
 {
